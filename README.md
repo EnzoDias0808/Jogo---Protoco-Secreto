@@ -1,4 +1,4 @@
-# Jogo---Protoco-Secreto
+# Jogo---Protocolo-Secreto
 Integrantes:
 Enzo Dias
 Emanueli Dalmolini
