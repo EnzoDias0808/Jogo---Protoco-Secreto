@@ -44,3 +44,5 @@ Connseguir Acessar as Redes Sociais Dele.
 ## Links úteis
 - **Kanban (Trello):https://trello.com/b/2S6QaEIA/meu-quadro-do-trello
 - **Protótipo (Figma):https://www.figma.com/design/DnKXoP1vllo7BdVJa8cnMc/Sem-t%C3%ADtulo?node-id=0-1&t=CDoEfOgeMVTDSrYs-1
+- MVP : https://canva.link/gusv1h5v0jbey51
+  
