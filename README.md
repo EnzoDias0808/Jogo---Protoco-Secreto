@@ -6,7 +6,7 @@ Tirar o tédio das pessoas, com suspense e investigação.
 ## Solução
 Um jogo de investigação, para descobrir o suspeito e desvendar os minstérios.
 ## Público-alvo
-Pessoas acima de 12 Anos
+Pessoas acima de 12 Anos...
 ## Funcionalidades principais (máx. 5)
 1. Investigação em Redes Sociais Fictícias
 2. Decodificação do Arquivo Roubado
@@ -41,8 +41,15 @@ Connseguir Acessar as Redes Sociais Dele.
 | EMILLY    | Front-End |
 | JULIO     | Back-end |
 
+BackLog
+| Prioridade | História de usuário | Critérios de aceite |
+|------------|---------------------|----------------------|
+| Essencial  | Botão de Sair e Salvar| No canto da tela, quando clicado abre uma caixa pedidno se tem certeza que deseja sair
+| Importante | Dicas para passar de nivel | cnforme o jogador joga, consege as dicas que ficam salvas nas anotações |
+| Desejável  |  | ... |
+| Futuro     | ... | ... |
+
 ## Links úteis
 - **Kanban (Trello):https://trello.com/b/2S6QaEIA/meu-quadro-do-trello
 - **Protótipo (Figma):https://www.figma.com/design/DnKXoP1vllo7BdVJa8cnMc/Sem-t%C3%ADtulo?node-id=0-1&t=CDoEfOgeMVTDSrYs-1
 - MVP : https://canva.link/gusv1h5v0jbey51
-  
