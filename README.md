@@ -72,7 +72,7 @@ BackLog
 
 ### Solução
 " Para isso , criamos o PROTOCOLO SECRETO, um jogo de investigação, que funciona da seguinte forma:
-O Úsuario entra e cria sua conta.
+O Usúario entra e cria sua conta.
 Depois começa a partida.
 Ele tem que desvendar quem realizou o tal crime, acessando contas de redes sociais, seus dados, hobbies, e o jogador pode ir anotando as pistas recolhidas pela jogatina.
 Logo após isso, quando o jogador desvendar o mistério da primeira fase, ele vai progredindo de fase por fase que vão ficando mais dificeis, até zerar o jogo."
@@ -82,3 +82,18 @@ Logo após isso, quando o jogador desvendar o mistério da primeira fase, ele va
 
 ### Chamada para ação
 " Queremos que o público apóie o nosso jogo, e quando estiver pronto, joguem e se divirtão com ele"
+
+## Screenshots da aplicação
+
+
+![ Tela inicial ](file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180141.png)
+* Tela inicial do MVP *
+
+![ Tela de Cadastro ](file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180212.png)
+* Tela onde o usúario cria sua conta *
+
+![ Tela de Login ](file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180200.png)
+* Tela onde o usúario volta a sua conta *
+
+![ Tela de Partida ](file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180221.png)
+* Tela de uma fase do jogo *
