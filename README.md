@@ -62,6 +62,23 @@ BackLog
 | Lead Time medio | 70,33 dias |
 | Cycle Time medio | 70,33 dias |
 
+## Métricas de validação
+- ** Formulario:** https://docs.google.com/forms/d/1Ln-EeFJa9xP6o4ZcuhjW-uQ9WsG_RasCtggps7phduE/edit#responses
+- ** Total de respostas :** Até o momento que mandei o link do forms, foram 5 Respostas
+- ** Taxa de interesse :** 80% dos entrevistados demonstraram interesse na solução
+- ** NPS médio :** 9,2
+- ** Principais feedbacks :**
+
+- O que você mais gostou:
+
+- Eu gostei do recolhimento de pistas e análise de dados pois acho isto interessante
+- A forma como ele pode ajudar a melhorar o processo cognitivo das pessoa
+
+- O que você melhoraria:
+
+- Sempre tem algo a melhorar,mas eu acho que o jogo está muito bom e com explicação bem feita pode ser feito de um jeito bom
+- Deixaria o jogo um pouco maior, tendo fazes e etc.
+
 ## Roteiro do pitch
 
 ### Contexto
@@ -83,8 +100,9 @@ Logo após isso, quando o jogador desvendar o mistério da primeira fase, ele va
 ### Chamada para ação
 " Queremos que o público apóie o nosso jogo, e quando estiver pronto, joguem e se divirtão com ele"
 
-## Screenshots da aplicação
 
+
+## Screenshots da aplicação
 
 ![ Tela inicial ] (file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180141.png)
 * Tela inicial do MVP *
