@@ -53,3 +53,11 @@ BackLog
 - **Kanban (Trello):https://trello.com/b/2S6QaEIA/meu-quadro-do-trello
 - **Protótipo (Figma):https://www.figma.com/design/DnKXoP1vllo7BdVJa8cnMc/Sem-t%C3%ADtulo?node-id=0-1&t=CDoEfOgeMVTDSrYs-1
 - MVP : https://canva.link/gusv1h5v0jbey51
+
+## Kanban e indicadores
+![ Print do Trello ] file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20165400.png
+| Indicador | Valor |
+| - - - - - - - - - - -| - - - - - - -|
+| WIP ( limite ) | 3 c a r t a s |
+| Lead Time medio | 70,33 dias |
+| Cycle Time medio | 70,33 dias |
