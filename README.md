@@ -86,14 +86,14 @@ Logo após isso, quando o jogador desvendar o mistério da primeira fase, ele va
 ## Screenshots da aplicação
 
 
-![ Tela inicial ](file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180141.png)
+![ Tela inicial ] (file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180141.png)
 * Tela inicial do MVP *
 
-![ Tela de Cadastro ](file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180212.png)
+![ Tela de Cadastro ] (file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180212.png)
 * Tela onde o usúario cria sua conta *
 
-![ Tela de Login ](file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180200.png)
+![ Tela de Login ] (file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180200.png)
 * Tela onde o usúario volta a sua conta *
 
-![ Tela de Partida ](file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180221.png)
+![ Tela de Partida ] (file:///C:/Users/diase/OneDrive/Pictures/Screenshots/Captura%20de%20tela%202026-08-12%20180221.png)
 * Tela de uma fase do jogo *
