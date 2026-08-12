@@ -61,3 +61,24 @@ BackLog
 | WIP ( limite ) | 3 c a r t a s |
 | Lead Time medio | 70,33 dias |
 | Cycle Time medio | 70,33 dias |
+
+## Roteiro do pitch
+
+### Contexto
+" Somos alunos do 2 ano C do Curso de Desenvolvimento de Sistemas e percebemos que, varias pessoas tem suas habilidades "Bloqueadas" como o raciocínio lógico, pensamento crítico, atenção aos detalhes, colaboração e comunicação."
+
+### Conflito
+" O principal problema que queremos resolver é essa falta de desenvolvimento das habilidades pessoais"
+
+### Solução
+" Para isso , criamos o PROTOCOLO SECRETO, um jogo de investigação, que funciona da seguinte forma:
+O Úsuario entra e cria sua conta.
+Depois começa a partida.
+Ele tem que desvendar quem realizou o tal crime, acessando contas de redes sociais, seus dados, hobbies, e o jogador pode ir anotando as pistas recolhidas pela jogatina.
+Logo após isso, quando o jogador desvendar o mistério da primeira fase, ele vai progredindo de fase por fase que vão ficando mais dificeis, até zerar o jogo."
+
+### Prova
+" Não teve testadores ainda, pois só temos os layout do jogo "
+
+### Chamada para ação
+" Queremos que o público apóie o nosso jogo, e quando estiver pronto, joguem e se divirtão com ele"
