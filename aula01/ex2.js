@@ -1,0 +1,1 @@
+const pares = nums.filter(n => n % 2 === 0);
