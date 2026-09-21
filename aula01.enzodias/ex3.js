@@ -1,0 +1,1 @@
+//O map transforma todos os elementos de uma lista, mantendo o mesmo tamanho original, enquanto o filter seleciona apenas os elementos que atendem a uma condição, podendo reduzir o tamanho da lista.

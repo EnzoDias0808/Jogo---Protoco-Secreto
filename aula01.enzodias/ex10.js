@@ -1,0 +1,1 @@
+//Sem chaves importa o padrão (export default); com chaves importa um item específico (export const) pelo nome exato.
