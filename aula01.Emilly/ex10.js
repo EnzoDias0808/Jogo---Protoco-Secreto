@@ -1,0 +1,1 @@
+// O import Botao busca uma exportação default, permitindo que você mude o nome se quiser. O import { Botao } busca uma exportação nomeada específica, exigindo o nome exato.

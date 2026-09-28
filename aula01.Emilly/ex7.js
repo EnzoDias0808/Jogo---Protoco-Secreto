@@ -1,0 +1,1 @@
+const pPromocao = { ...p, preco: 20 };
