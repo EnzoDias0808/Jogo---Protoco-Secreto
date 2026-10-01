@@ -1,0 +1,1 @@
+//Quando a requisição falha, ocorre um erro, que pode ser por falta de internet. Já um erro HTTP, como 404, é uma resposta recebida do servidor, O fetch sozinho não lança erro automaticamente para esses status
