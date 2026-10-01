@@ -1,0 +1,1 @@
+//Os tres estados são pending,fulfilled e rejected
