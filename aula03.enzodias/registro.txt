@@ -1,0 +1,3 @@
+O experimento que mais me incomodou foi o segundo, porque eu digitei uma informação e ela desapareceu quando a lista foi redesenhada.
+Isso aconteceu porque o innerHTML apagou os elementos da lista e o JavaScript criou tudo novamente.
+Com isso, entendi que no JavaScript puro precisamos atualizar a tela manualmente sempre que os dados mudam.
