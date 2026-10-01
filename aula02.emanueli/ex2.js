@@ -1,0 +1,1 @@
+1. Os três estados possíveis são Pending (pendente), Fulfilled (realizada/resolvida) e Rejected (rejeitada).

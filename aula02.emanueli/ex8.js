@@ -1,0 +1,1 @@
+const dados = await resposta.json();

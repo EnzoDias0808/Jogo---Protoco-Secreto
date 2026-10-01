@@ -1,0 +1,1 @@
+1. Porque o await precisa que a função seja marcada como async para que o JavaScript saiba que deve transformar o fluxo daquela função específica em um comportamento assíncrono (gerenciando a pausa e a retomada).

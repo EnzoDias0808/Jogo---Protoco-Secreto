@@ -1,0 +1,1 @@
+O await pausa apenas a execução da função async onde ele está, liberando o resto do programa para continuar rodando.
