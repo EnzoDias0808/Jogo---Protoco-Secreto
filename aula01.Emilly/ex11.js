@@ -1,1 +1,0 @@
-// Usar lista.push(novo) altera o array original diretamente. No React, isso é um problema grave porque não avisa o componente que ele precisa atualizar a tela, deixando a interface desatualizada
