@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de Tarefas</title>
+
+</head> <body>
+<h1>Lista de Tarefas</h1>
+
+<p id="contador"></p>
+
+<ul id="lista"></ul>
+
+<input
+    id="novo"
+    type="text"
+    placeholder="Nova tarefa"
+>
+
+<button id="add">
+    Adicionar
+</button>
+
+<script>
+
+    let tarefas = [
+        {
+            id: 1,
+            texto: "Estudar React",
+            feita: false
+        },
+        {
+            id: 2,
+            texto: "Limpar a casa",
+            feita: true
+        }
+    ];
+
+
+    function desenhar() {
+
+        const ul = document.getElementById("lista");
+
+        ul.innerHTML = "";
+
+
+        for (const t of tarefas) {
+
+            const li = document.createElement("li");
+
+            li.textContent =
+                t.texto + (t.feita ? " (feita)" : "");
+
+            ul.appendChild(li);
+        }
+
+
+        document.getElementById("contador").textContent =
+            tarefas.length + " tarefas";
+    }
+
+
+    document.getElementById("add").addEventListener("click", () => {
+
+        const input = document.getElementById("novo");
+
+
+        tarefas.push({
+            id: Date.now(),
+            texto: input.value,
+            feita: false
+        });
+
+
+        input.value = "";
+
+
+        desenhar();
+    });
+
+
+    desenhar();
+
+</script>
+
+</body> </html>
+</body>
+</html>
