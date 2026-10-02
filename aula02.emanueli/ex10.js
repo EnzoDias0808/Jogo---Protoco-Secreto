@@ -1,1 +1,0 @@
-Porque o .map() roda de forma síncrona e imediata para todos os itens, disparando as funções assíncronas ao mesmo tempo e retornando uma lista cheia de Promises pendentes, em vez de esperar cada uma terminar.

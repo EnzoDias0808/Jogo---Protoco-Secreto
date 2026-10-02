@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="contador"></p>
+    <ul id="lista"></ul>
+    <input id="novo" placeholder="nova tarefa">
+    <button id="add">Adicionar</button>
+
+    <script>function ListaDeTarefas() {
+            const [tarefas, setTarefas] = useState([
+                { id: 1, texto: "Estudar React", feita: false },
+                { id: 2, texto: "Levar o cachorro", feita: true }
+            ]);
+            return (
+                <div>
+                    <p>{tarefas.length} tarefas</p>
+                    <ul>
+                        {tarefas.map((t) => (
+                            <li key={t.id}>{t.texto} {t.feita ? "(feita)" : ""}</li>
+                        ))}
+                    </ul>
+                </div>
+            );
+        }</script>
+</body>
+
+</html>

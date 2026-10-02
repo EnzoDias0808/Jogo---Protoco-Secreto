@@ -1,1 +1,0 @@
-Na falha de requisição (sem internet), a conexão nem acontece, então o fetch rejeita a Promise. No erro do servidor (404/500), a comunicação aconteceu com sucesso e o servidor respondeu. O fetch só rejeita a Promise se a requisição não for concluída; respostas de erro de HTTP ainda são respostas válidas.
