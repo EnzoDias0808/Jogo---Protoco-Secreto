@@ -1,0 +1,1 @@
+O erro é que a arrow function utiliza chaves {} mas não possui a palavra-chave return, fazendo com que o .map() retorne um array cheio de undefined. Para corrigir, basta remover as chaves para ter um retorno implícito: const total = precos.map((p) => p * 2);

@@ -1,0 +1,1 @@
+A diferença é que import Botao busca a exportação padrão (export default) do arquivo, permitindo que você o importe com qualquer nome, enquanto import { Botao } busca uma exportação nomeada (export const Botao), exigindo que você use exatamente o mesmo nome definido no arquivo de origem.

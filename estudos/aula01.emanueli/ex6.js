@@ -1,0 +1,1 @@
+const cores2 = [...cores, "vermelho"];

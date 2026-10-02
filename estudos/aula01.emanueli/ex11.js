@@ -1,0 +1,1 @@
+O uso de lista.push(novo) é um problema porque ele modifica o estado original diretamente (mutação). Como a referência do array na memória continua a mesma, o React não percebe a mudança e não atualiza a tela, além de quebrar a previsibilidade do ciclo de renderização.
