@@ -1,0 +1,1 @@
+//Porque o await só pode ser usado dentro de uma função marcada com async

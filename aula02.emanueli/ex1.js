@@ -1,0 +1,1 @@
+Uma Promise é um objeto que representa o sucesso ou a falha futura de uma operação assíncrona.

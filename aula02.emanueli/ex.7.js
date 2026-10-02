@@ -1,0 +1,1 @@
+O erro é que a função carregarDados não foi declarada com a palavra-chave async, o que impede o uso do await dentro dela.
