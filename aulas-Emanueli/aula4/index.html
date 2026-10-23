@@ -23,8 +23,8 @@
         function Cartao() {
             return (
                 <div>
-                    <h3>Título do item</h3>
-                    <p>Descrição curta do item.</p>
+                    <h3>protocolo secreto</h3>
+                    <p>um jogo de investigação, para descobrir o suspeito e desvendar os misterios</p>
                 </div>
             );
         }
@@ -43,6 +43,17 @@
         }
         const raiz = ReactDOM.createRoot(document.getElementById("root"));
         raiz.render(<App />);
+        function Lista() {
+            const tarefas = [
+                { id: 1, texto: "Estudar React" },
+                { id: 2, texto: "Levar o cachorro" }
+            ];
+            return (
+                <ul>
+                    {tarefas.map((t) => <li key={t.id}>{t.texto}</li>)}
+                </ul>
+            );
+        }
     </script>
 </body>
 
