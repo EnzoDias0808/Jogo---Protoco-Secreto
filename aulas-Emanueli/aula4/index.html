@@ -12,6 +12,32 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
+        function Cabecalho() {
+            return (
+                <header>
+                    <h1>Sistema da Squad</h1>
+                    <p>Projeto integrador do 3o trimestre</p>
+                </header>
+            );
+        }
+        function Cartao() {
+            return (
+                <div>
+                    <h3>Título do item</h3>
+                    <p>Descrição curta do item.</p>
+                </div>
+            );
+        }
+        function App() {
+            return (
+                <div>
+                    <Cabecalho />
+                    <Cartao />
+                    <Cartao />
+                    <Cartao />
+                </div>
+            );
+        }
         function App() {
             return <h1>Olá, React</h1>;
         }
