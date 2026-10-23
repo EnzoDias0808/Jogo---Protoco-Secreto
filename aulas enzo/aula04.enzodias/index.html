@@ -45,6 +45,17 @@
     }
     const raiz = ReactDOM.createRoot(document.getElementById("root"));
     raiz.render(<App />);
+    function Lista() {
+      const tarefas = [
+        { id: 1, texto: "Estudar React" },
+        { id: 2, texto: "Levar o cachorro" }
+      ];
+      return (
+        <ul>
+          {tarefas.map((t) => <li key={t.id}>{t.texto}</li>)}
+        </ul>
+      );
+    }
   </script>
 </body>
 
