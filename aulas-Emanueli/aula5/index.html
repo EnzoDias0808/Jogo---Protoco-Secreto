@@ -77,57 +77,24 @@
         }
     </style>
 </head>
-
 <body>
-    <div id="root"></div>
 
-    <script src="https://unpkg.com" crossorigin></script>
-    <script src="https://unpkg.com" crossorigin></script>
-    <script src="https://unpkg.com"></script>
-    
-    <script type="text/babel">
-        function Cabecalho() {
-            return (
-                <header>
-                    <h1>Sistema da Squad</h1>
-                    <p>Projeto integrador do 3o trimestre</p>
-                </header>
-            );
-        }
+    <div id="root">
+        <header>
+            <h1>Sistema da Squad</h1>
+            <p>Projeto integrador do 3o trimestre</p>
+        </header>
 
-        function Cartao() {
-            return (
-                <div className="destaque">
-                    <h3>protocolo secreto</h3>
-                    <p>um jogo de investigação, para descobrir o suspeito e desvendar os misterios</p>
-                </div>
-            );
-        }
+        <div class="destaque">
+            <h3>protocolo secreto</h3>
+            <p>um jogo de investigação, para descobrir o suspeito e desvendar os misterios</p>
+        </div>
 
-        function Lista() {
-            const tarefas = [
-                { id: 1, texto: "Estudar React" },
-                { id: 2, texto: "Levar o cachorro" }
-            ];
-            return (
-                <ul>
-                    {tarefas.map((t) => <li key={t.id}>{t.texto}</li>)}
-                </ul>
-            );
-        }
+        <ul>
+            <li>Estudar React</li>
+            <li>Levar o cachorro</li>
+        </ul>
+    </div>
 
-        function App() {
-            return (
-                <div>
-                    <Cabecalho />
-                    <Cartao />
-                    <Lista />
-                </div>
-            );
-        }
-
-        const raiz = ReactDOM.createRoot(document.getElementById("root"));
-        raiz.render(<App />);
-    </script>
 </body>
 </html>
