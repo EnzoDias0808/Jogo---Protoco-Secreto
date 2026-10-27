@@ -1,100 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #121214;
-            color: #e1e1e6;
+            color: #ffffff;
             margin: 0;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            text-align: center;
-            border-bottom: 2px solid #29292e;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        h1 {
-            color: #04d361;
-            margin: 0 0 8px 0;
-        }
-
-        header p {
-            color: #a8a8b3;
-            margin: 0;
-        }
-
-        .destaque {
-            background-color: #202024;
-            border: 2px solid #04d361;
-            border-radius: 8px;
             padding: 20px;
-            margin-bottom: 15px;
-            width: 100%;
-            max-width: 460px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .destaque h3 {
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .topo {
+            text-align: center;
+            border-bottom: 1px solid #29292e;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .topo h1 {
+            color: #04d361;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .topo p {
+            color: #a8a8b3;
+            margin: 5px 0 0 0;
+            font-size: 14px;
+        }
+
+        .conteudo {
+            background-color: #202024;
+            border: 1px solid #04d361;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .conteudo h3 {
             color: #04d361;
             margin: 0 0 10px 0;
-            text-transform: uppercase;
-            font-size: 1.1rem;
-            font-weight: bold;
+            font-size: 18px;
         }
 
-        .destaque p {
+        .conteudo p {
             color: #c4c4cc;
             margin: 0;
-            line-height: 1.4;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
-        ul {
-            list-style: none;
+        .lista-tarefas {
             padding: 0;
-            margin: 20px 0 0 0;
-            width: 100%;
-            max-width: 500px;
+            margin: 0;
+            list-style: none;
         }
 
-        li {
+        .lista-tarefas li {
             background-color: #29292e;
-            padding: 12px 16px;
-            margin-bottom: 10px;
-            border-radius: 6px;
-            border-left: 4px solid #04d361;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-left: 3px solid #04d361;
+            font-size: 14px;
         }
     </style>
 </head>
+
 <body>
 
-    <div id="root">
-        <header>
+    <div class="container">
+        <header class="topo">
             <h1>Sistema da Squad</h1>
             <p>Projeto integrador do 3o trimestre</p>
         </header>
 
-        <div class="destaque">
+        <div class="conteudo">
             <h3>protocolo secreto</h3>
             <p>um jogo de investigação, para descobrir o suspeito e desvendar os misterios</p>
         </div>
 
-        <ul>
+        <ul class="lista-tarefas">
             <li>Estudar React</li>
             <li>Levar o cachorro</li>
         </ul>
     </div>
 
 </body>
+
 </html>
+
+// professor tentei usar o codigo da aula anterior para colocar o css e não deu certo por isso fiz de outra forma
