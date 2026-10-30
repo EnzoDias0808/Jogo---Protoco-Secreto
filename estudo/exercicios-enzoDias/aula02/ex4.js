@@ -1,1 +1,1 @@
-//O await pausa somente a função onde ele esta
+//O await pausa somente a função onde ele esta 

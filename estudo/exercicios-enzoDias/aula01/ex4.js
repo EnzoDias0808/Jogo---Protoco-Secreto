@@ -1,1 +1,1 @@
-const { titulo, preco } = p
+const { titulo, preco } = p 

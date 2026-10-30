@@ -1,1 +1,1 @@
-const ehCaro = preco => preco > 100
+const ehCaro = preco => preco > 100 

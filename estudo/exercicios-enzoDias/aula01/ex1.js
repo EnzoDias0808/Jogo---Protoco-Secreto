@@ -1,1 +1,1 @@
-const dobro = nums.map(n => n * 2);
+const dobro = nums.map(n => n * 2); 

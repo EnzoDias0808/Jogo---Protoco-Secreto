@@ -1,1 +1,1 @@
-const dados = await resposta.json();
+const dados = await resposta.json(); 

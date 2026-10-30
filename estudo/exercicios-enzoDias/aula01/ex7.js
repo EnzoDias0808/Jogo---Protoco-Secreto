@@ -1,1 +1,1 @@
-const pEmPromocao = { ...p, preco: 20 };
+const pEmPromocao = { ...p, preco: 20 }; 

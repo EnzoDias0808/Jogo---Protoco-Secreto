@@ -5,4 +5,4 @@ console.log(produto);
 } catch (erro) {
 console.log(erro);
 }
-}
+} 

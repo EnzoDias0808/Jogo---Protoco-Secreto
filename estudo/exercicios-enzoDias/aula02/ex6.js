@@ -4,4 +4,4 @@ setTimeout(() => {
 resolve({ id, nome: "Produto " + id });
 }, 1000);
 });
-}
+} 
