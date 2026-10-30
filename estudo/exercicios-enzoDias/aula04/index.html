@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu primeiro React</title>
+</head>
+
+<body>
+
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    function Cabecalho() {
+      return (
+        <header>
+          <h1>Protocolo Secreto</h1>
+          <p> Um jogo de investigação para descobrir o suspeito e desvendar os mistérios. </p>
+        </header>
+      );
+    }
+
+    function Cartao() {
+      return (
+        <div>
+          <h3>Investigação em Redes Sociais Fictícias</h3>
+          <p>O jogador vasculha perfis falsos, conexões e postagens em uma plataforma interna do jogo para cruzar dados, descobrir hábitos, gostos e conexões do alvo.</p>
+
+          <h3>Decodificação do Arquivo Roubado</h3>
+          <p>Quebra-cabeças lógicos e minijogos de criptografia onde o jogador descriptografa documentos, fotos vazadas ou arquivos corrompidos para obter provas.</p>
+
+          <h3>Senhas Escondidas Através de Pistas</h3>
+          <p> Em vez de força bruta automática, o jogador deve adivinhar senhas analisando o ambiente digital do alvo (como o nome do pet, data de nascimento escondida em uma foto ou respostas a perguntas de segurança).</p>
+        </div>
+      );
+    }
+
+
+    function Lista() {
+      const tarefas = [
+        { id: 1, texto: "Botão de Sair e Salvar" },
+        { id: 2, texto: "Dicas para passar de nivel" }
+      ];
+
+      return (
+        <ul>
+          {tarefas.map((t) => (
+            <li key={t.id}>
+              {t.texto}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+
+
+    function App() {
+      return (
+        <div>
+          <Cabecalho />
+
+          <Cartao />
+          <h2>Lista de tarefas</h2>
+          <Lista />
+        </div>
+      );
+    }
+
+    const raiz = ReactDOM.createRoot(
+      document.getElementById("root")
+    );
+    raiz.render(<App />);
+  </script>
+</body>
+</html>

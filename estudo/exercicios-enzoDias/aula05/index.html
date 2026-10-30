@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protocolo Secreto</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #1f221f;
+        color: #5cfc3d;
+        margin: 0;
+        padding: 20px;
+      }
+
+      header {
+        background-color: #000000;
+        color: rgb(108, 243, 75);
+        padding: 25px;
+        text-align: center;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .destaque {
+        background-color: #080707;
+        color: #b8e7a2;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .destaque h3 {
+        margin-top: 0;
+      }
+
+      .lista-tarefas {
+        background-color: rgb(5, 5, 5);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .lista-tarefas li {
+        margin-bottom: 12px;
+      }
+
+      .feita {
+        color: #2aeb71;
+      }
+
+      .pendente {
+        color: #ff0c0c;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      const projeto = "Protocolo Secreto";
+
+      function Cabecalho() {
+        return (
+          <header>
+            <h1>{projeto}</h1>
+            <p>Um jogo de investigação para descobrir o suspeito e desvendar os mistérios.</p>
+          </header>
+        );
+      }
+
+      function Cartao() {
+        return (
+          <div className="destaque">
+            <h3>Missão de investigação</h3>
+            <p>Analise as pistas, investigue os suspeitos e descubra quem cometeu o crime.</p>
+            <p>Prepare sua mente para resolver os mistérios!</p>
+          </div>
+        );
+      }
+
+      function Lista() {
+        const tarefas = [
+        { 
+            id: 1, 
+            texto: "Descobrir o culpado", 
+            feita: true 
+        },
+        { 
+            id: 2, 
+            texto: "Investigar as pistas", 
+            feita: false
+        },
+        { 
+            id: 3, 
+            texto: "Analisar os suspeitos", 
+            feita: false 
+        },
+        ];
+
+        return (
+          <div className="lista-tarefas">
+            <h2>Lista de tarefas da investigação</h2>
+            <ul>
+              {tarefas.map((t) => (
+                <li key={t.id}>
+                  {t.texto} -{" "}
+                  <span className={t.feita ? "feita" : "pendente"}>
+                    {t.feita ? " (feita)" : " (pendente)"}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+
+      function App() {
+        return (
+          <div>
+            <Cabecalho />
+            <Cartao />
+            <Lista />
+          </div>
+        );
+      }
+
+      // RENDERIZAÇÃO DA APLICAÇÃO
+      const raiz = ReactDOM.createRoot(document.getElementById("root"));
+      raiz.render(<App />);
+    </script>
+  </body>
+</html>
