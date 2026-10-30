@@ -45,4 +45,4 @@ Qual componente você fez, o que foi mais difícil e como o seu pedaço se encai
 
 ## Regra importante
 
-Pode ajudar e fazer junto, mas cada um escreve o seu código e precisa saber explicar. Entregar o arquivo de outra pessoa como seu zera a parte copiada e afeta a nota.
+Pode ajudar e fazer junto, mas cada um escreve o seu código e precisa saber explicar. Entregar o arquivo de outra pessoa como seu zera a parte copiada e afeta a nota. 

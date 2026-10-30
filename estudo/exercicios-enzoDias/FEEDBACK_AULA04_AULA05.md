@@ -6,4 +6,4 @@ Aula 05. Nota: 0,00 de 0,10.
 
 Não encontrei a entrega da Aula 05. Nota 0,00.
 
-**Nota das Aulas 04 e 05: 0,05 de 0,20.**
+**Nota das Aulas 04 e 05: 0,05 de 0,20.**  
