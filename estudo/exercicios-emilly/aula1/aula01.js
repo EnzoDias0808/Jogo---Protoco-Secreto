@@ -34,4 +34,4 @@ const emEstoque = produtos
 // Usar lista.push(novo) altera o array original diretamente. No React, isso é um problema grave porque não avisa o componente que ele precisa atualizar a tela, deixando a interface desatualizada
 
 //atv 12
-const maisQueCinco = produtos.filter(p => p.estoque > 5).map(p => p.nome);
+const maisQueCinco = produtos.filter(p => p.estoque > 5).map(p => p.nome); 

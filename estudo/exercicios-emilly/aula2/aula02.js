@@ -37,4 +37,4 @@ const dados = await resposta.json();
 //A diferença central está em quem quebrou o fluxo da comunicação.
 
 //atv 10
-//porque ele é uma função síncrona que não foi projetada para lidar com assincronismo.
+//porque ele é uma função síncrona que não foi projetada para lidar com assincronismo. 

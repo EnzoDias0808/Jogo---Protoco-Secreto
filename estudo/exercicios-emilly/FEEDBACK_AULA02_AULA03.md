@@ -10,4 +10,4 @@ Aula 03. Nota: 0,10 de 0,10.
 
 A página implementa a lista, o contador, a entrada de tarefa e o redesenho, em JavaScript puro. O arquivo tem um documento HTML inteiro colado dentro do body de outro, o que funciona no navegador, mas bagunça a estrutura. Faltaram as respostas dos quatro experimentos e o registro. Mantive 0,10 pela página funcionando.
 
-**Nota das Aulas 01, 02 e 03: 0,25 de 0,30.**
+**Nota das Aulas 01, 02 e 03: 0,25 de 0,30.** 
