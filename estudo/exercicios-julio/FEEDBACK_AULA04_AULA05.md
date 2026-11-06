@@ -9,13 +9,15 @@ Julio, sua nota registrada neste levantamento é **0,20 pontos**.
 | Aula 03 | 0,00 | Não foi localizada entrega válida. |
 | Aula 04 | 0,00 | Não foi localizada entrega válida. |
 | Aula 05 — JSX | 0,00 | Não foi localizada entrega válida. |
-| Checkpoint 1 — Figma e componentes | 0,00 | Entrega não localizada neste levantamento. |
-| Desconto por recurso além do conteúdo | 0,00 | Nenhum desconto aplicado. |
+| Checkpoint 1 — tela do grupo em componentes | 0,00 | Atividade não realizada. |
+| Desconto | 0,00 | Nenhum desconto aplicado. |
 | **Total** | **0,20** |  |
 
-## Entregas localizadas
+## Situação da atividade de Figma/componentes
 
-Não foi localizada, neste levantamento, uma entrega individual ou do grupo correspondente ao primeiro checkpoint de Figma e componentes. Por isso, o checkpoint permanece com **0,00** até que uma evidência de entrega seja localizada ou apresentada.
+A atividade específica da Aula 05 — escolher uma tela do Figma, dividir em componentes, construir individualmente o componente com `props` e depois montar a tela do grupo — não foi realizada. Por isso, não há nota de Checkpoint 1 e os **2,00 pontos** não foram atribuídos.
+
+Os arquivos encontrados correspondem às atividades normais da Aula 05 sobre JSX. Eles não comprovam a realização da atividade adicional da tela do grupo em componentes.
 
 ## Situação das aulas
 
@@ -25,4 +27,4 @@ Não foi localizada, neste levantamento, uma entrega individual ou do grupo corr
 - **Aula 04:** não foi localizada entrega válida; nota registrada 0,00.
 - **Aula 05 — JSX:** não foi localizada entrega válida; nota registrada 0,00.
 
-A nota foi atribuída com base nos arquivos e registros encontrados nos repositórios mapeados. Nenhum desconto foi aplicado por uso de recurso além do conteúdo das aulas.
+Não houve desconto por uso de recurso além do conteúdo das aulas. A nota foi atribuída com base nas entregas das aulas e na ausência de realização da atividade específica do Checkpoint 1.
