@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Treinos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        const treinos = [
+            { id: 1, nome: "Peito e tríceps", duracao: 90, feito: true },
+            { id: 2, nome: "Costas e bíceps", duracao: 60, feito: false },
+            { id: 3, nome: "Pernas", duracao: 75, feito: false }
+        ];
+
+        function Cabecalho({ titulo, subtitulo }) {
+            return (
+                <header className="cabecalho">
+                    <div>
+                        <h1>{titulo}</h1>
+                        <p>{subtitulo}</p>
+                    </div>
+                    <button className="botao">Novo treino</button>
+                </header>
+            );
+        }
+
+        function CartaoTreino({ nome, duracao, feito }) {
+            return (
+                <article className="cartao">
+                    <div>
+                        <h2>{nome}</h2>
+                        <p>{duracao} minutos</p>
+                    </div>
+
+                    <span className={feito ? "feito" : "pendente"}>
+                        {feito ? "Concluído" : "Pendente"}
+                    </span>
+                </article>
+            );
+        }
+
+        function ListaDeTreinos({ itens }) {
+            return (
+                <section className="lista">
+                    {itens.map((treino) => (
+                        <CartaoTreino
+                            key={treino.id}
+                            {...treino}
+                        />
+                    ))}
+                </section>
+            );
+        }
+
+        function App() {
+            return (
+                <main className="tela">
+                    <Cabecalho
+                        titulo="Diário de Treinos"
+                        subtitulo="Acompanhe seus treinos"
+                    />
+
+                    <ListaDeTreinos itens={treinos} />
+                </main>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById("root"))
+            .render(<App />);
+
+    </script>
+
+</body>
+</html>
