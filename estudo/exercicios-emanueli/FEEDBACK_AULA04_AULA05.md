@@ -1,9 +1,30 @@
-Aula 04. Nota: 0,05 de 0,10.
+# Feedback individual — Emanueli De Paula Dalmolin
 
-Seu index.html tem a mesma estrutura do arquivo do Enzo Dias: mesmos componentes, mesmo App duplicado, mesma falta do <script type="text/babel"> e o mesmo comentário no final, só com o título trocado para "Sistema da Squad" e a tag <header> corrigida. O commit do Enzo é das 10:56 do dia 23/10 e o seu é das 11:08, então o dele veio primeiro. Copiar o trabalho de um colega e trocar umas palavras é desonestidade acadêmica e afeta a nota. Além disso a página não renderiza por falta do script. Nota 0,05.
+Emanueli, sua nota registrada neste levantamento é **0,35 pontos**.
 
-Aula 05. Nota: 0,00 de 0,10.
+| Atividade | Nota | Situação |
+|---|---:|---|
+| Aula 01 | 0,10 | Entrega registrada com nota integral. |
+| Aula 02 | 0,10 | Entrega registrada com nota integral. |
+| Aula 03 | 0,10 | Entrega registrada com nota integral. |
+| Aula 04 | 0,05 | Entrega parcial, com nota reduzida conforme o lançamento. |
+| Aula 05 — JSX | 0,00 | Entrega encontrada, mas o arquivo é HTML estático; não há React/JSX executável. |
+| Checkpoint 1 — tela do grupo em componentes | 0,00 | Atividade não realizada. |
+| Desconto | 0,00 | Nenhum desconto aplicado. |
+| **Total** | **0,35** |  |
 
-Não encontrei a entrega da Aula 05. Nota 0,00.
+## Situação da atividade de Figma/componentes
 
-**Nota das Aulas 04 e 05: 0,05 de 0,20.**
+A atividade específica da Aula 05 — escolher uma tela do Figma, dividir em componentes, construir individualmente o componente com `props` e depois montar a tela do grupo — não foi realizada. Por isso, não há nota de Checkpoint 1 e os **2,00 pontos** não foram atribuídos.
+
+Os arquivos encontrados correspondem às atividades normais da Aula 05 sobre JSX. Eles não comprovam a realização da atividade adicional da tela do grupo em componentes.
+
+## Situação das aulas
+
+- **Aula 01:** entrega registrada com nota integral de 0,10.
+- **Aula 02:** entrega registrada com nota integral de 0,10.
+- **Aula 03:** entrega registrada com nota integral de 0,10.
+- **Aula 04:** entrega parcial, registrada com 0,05.
+- **Aula 05 — JSX:** Entrega encontrada, mas o arquivo é HTML estático; não há React/JSX executável. Nota registrada: 0,00.
+
+Não houve desconto por uso de recurso além do conteúdo das aulas. A nota foi atribuída com base nas entregas das aulas e na ausência de realização da atividade específica do Checkpoint 1.
