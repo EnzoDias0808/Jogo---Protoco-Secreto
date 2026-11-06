@@ -1,1 +1,0 @@
-//O erro é que a função carregardados () não foi marcada como async, mas esta usando await

@@ -1,1 +1,0 @@
-//Promise é um objeto que representa um valor que ainda vai chegar no futuro

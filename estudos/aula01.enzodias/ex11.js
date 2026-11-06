@@ -1,1 +1,0 @@
-//No React, a renderização visual depende da imutabilidade. Como o push altera o array original diretamente na memória, o framework não consegue rastrear a modificação e deixa de atualizar a interface para o usuário.

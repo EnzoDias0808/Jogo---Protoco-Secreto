@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        function Cabecalho() {
+            return (
+                <header>
+                    <h1>Sistema da Squad</h1>
+                    <p>Projeto integrador do 3o trimestre</p>
+                </header>
+            );
+        }
+        function Cartao() {
+            return (
+                <div>
+                    <h3>protocolo secreto</h3>
+                    <p>um jogo de investigação, para descobrir o suspeito e desvendar os misterios</p>
+                </div>
+            );
+        }
+        function App() {
+            return (
+                <div>
+                    <Cabecalho />
+                    <Cartao />
+                    <Cartao />
+                    <Cartao />
+                </div>
+            );
+        }
+        function App() {
+            return <h1>Olá, React</h1>;
+        }
+        const raiz = ReactDOM.createRoot(document.getElementById("root"));
+        raiz.render(<App />);
+        function Lista() {
+            const tarefas = [
+                { id: 1, texto: "Estudar React" },
+                { id: 2, texto: "Levar o cachorro" }
+            ];
+            return (
+                <ul>
+                    {tarefas.map((t) => <li key={t.id}>{t.texto}</li>)}
+                </ul>
+            );
+        }
+    </script>
+</body>
+
+</html>
+
+// a diferença é que na aula 3 usamos java script puro e já na aula 4 usamoso react

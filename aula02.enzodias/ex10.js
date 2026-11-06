@@ -1,1 +1,0 @@
-//Porque o map não espera as promises terminarem, ele cria e devolve um vetor de promises pendentes. Para esperar todas, é necessário usar promise.all()
