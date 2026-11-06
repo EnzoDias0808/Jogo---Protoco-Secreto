@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meu primeiro React</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        function Cabecalho() {
+            return (
+                <header>
+                    <h1>PROTOCOLO SECRETO</h1>
+                    <p>Um jogo de investigação, para descobrir o suspeito e desvendar os minstérios.</p>
+                </header>
+            );
+        }
+
+        function Cartao() {
+            return (
+                <div>
+                    <h3>Exu</h3>
+                    <p></p>
+
+                    <h3>Exu2</h3>
+                    <p></p>
+
+                    <h3>Exu3</h3>
+                    <p></p>
+                </div>
+            );
+        }
+
+        function Lista() {
+            const tarefas = [
+                { id: 1, texto: "Estudar React" },
+                { id: 2, texto: "Levar o cachorro" }
+            ];
+            return (
+                <ul>
+                    {tarefas.map((t) => <li key={t.id}>{t.texto}</li>)}
+                </ul>
+            );
+        }
+
+        function App() {
+            return (
+                <div>
+                    <Cabecalho />
+                    <Cartao />
+                </div>
+            );
+        }
+
+        const raiz = ReactDOM.createRoot(document.getElementById("root"));
+        raiz.render(<App />);
+    </script>
+</body>
+
+</html>
