@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Treinos</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e7e7e7;
+            color: #202333;
+        }
+
+        .cabecalho,
+        .lista-treinos,
+        .mensagem-vazia,
+        .botao-novo,
+        .formulario {
+            display: none !important;
+        }
+
+        .cabecalho {
+            width: 100%;
+            height: 72px;
+            background-color: #292929;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .botao-menu {
+            position: absolute;
+            left: 26px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: transparent;
+            color: #ffffff;
+            font-size: 28px;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .titulo-cabecalho {
+            font-size: 21px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .menu-navegacao {
+            display: none;
+            position: absolute;
+            z-index: 10;
+            top: 62px;
+            left: 18px;
+            background: #ffffff;
+            border: 1px solid #dedee5;
+            border-radius: 10px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+            min-width: 160px;
+            overflow: hidden;
+        }
+
+        .menu-navegacao.aberto {
+            display: block;
+        }
+
+        .menu-navegacao a {
+            display: block;
+            padding: 12px 16px;
+            color: #292929;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .menu-navegacao a:hover {
+            background: #f0f3fa;
+        }
+
+        .pagina {
+            width: 100%;
+            max-width: 496px;
+            min-height: 1072px;
+            margin: 50px auto 50px;
+            padding: 72px 24px 55px;
+            background-color: #f7f8fc;
+            border-radius: 30px;
+        }
+
+        .titulo-principal {
+            font-size: 34px;
+            line-height: 1.2;
+            margin-bottom: 5px;
+            color: #202333;
+        }
+
+        .subtitulo {
+            color: #858895;
+            font-size: 17px;
+            line-height: 1.4;
+            margin-bottom: 28px;
+        }
+
+        .resumo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 13px;
+            margin-bottom: 21px;
+        }
+
+        .resumo-cartao {
+            min-height: 89px;
+            padding: 15px 18px;
+            background: #ffffff;
+            border: 1px solid #e0e2e9;
+            border-radius: 15px;
+            box-shadow: 0 1px 2px rgba(20, 30, 50, 0.04);
+        }
+
+        .resumo-cartao span {
+            display: block;
+            color: #858895;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .resumo-cartao strong {
+            display: block;
+            color: #3268d5;
+            font-size: 29px;
+            line-height: 1;
+        }
+
+        .campo {
+            margin-bottom: 21px;
+        }
+
+        .campo label {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 9px;
+            color: #292d3b;
+        }
+
+        .campo input {
+            width: 100%;
+            height: 52px;
+            padding: 0 16px;
+            border: 1px solid #dfe1e8;
+            border-radius: 14px;
+            background: #ffffff;
+            color: #252938;
+            font-family: inherit;
+            font-size: 17px;
+            outline: none;
+        }
+
+        .campo input::placeholder {
+            color: #858895;
+        }
+
+        .campo input:focus {
+            border-color: #3268e8;
+            box-shadow: 0 0 0 3px rgba(50, 104, 232, 0.10);
+        }
+
+        .lista-treinos {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 2px;
+        }
+
+        .treino {
+            min-height: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 15px 20px;
+            background: #ffffff;
+            border: 1px solid #dfe1e8;
+            border-radius: 16px;
+            box-shadow: 0 1px 2px rgba(20, 30, 50, 0.04);
+        }
+
+        .informacoes-treino {
+            min-width: 0;
+        }
+
+        .informacoes-treino h2 {
+            font-size: 19px;
+            font-weight: 700;
+            color: #252938;
+            margin-bottom: 4px;
+            overflow-wrap: anywhere;
+        }
+
+        .informacoes-treino p {
+            color: #858895;
+            font-size: 16px;
+        }
+
+        .acoes {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+            flex-shrink: 0;
+        }
+
+        .link-acao {
+            border: none;
+            background: transparent;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .editar {
+            color: #3268c9;
+        }
+
+        .excluir {
+            color: #c94b4b;
+        }
+
+        .link-acao:hover {
+            text-decoration: underline;
+        }
+
+        .mensagem-vazia {
+            display: none;
+            padding: 20px;
+            text-align: center;
+            color: #858895;
+            background: #ffffff;
+            border: 1px solid #e0e2e9;
+            border-radius: 14px;
+        }
+
+        .botao-novo {
+            width: 100%;
+            min-height: 47px;
+            margin-top: 21px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 12px;
+            background-color: #2863e8;
+            color: #ffffff;
+            text-align: left;
+            font-family: inherit;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .botao-novo:hover {
+            background-color: #1e54cc;
+        }
+
+        .formulario {
+            display: none;
+            margin-top: 20px;
+            padding: 18px;
+            background: #ffffff;
+            border: 1px solid #dfe1e8;
+            border-radius: 15px;
+        }
+
+        .formulario.visivel {
+            display: block;
+        }
+
+        .formulario h2 {
+            font-size: 19px;
+            margin-bottom: 15px;
+        }
+
+        .formulario .campo {
+            margin-bottom: 13px;
+        }
+
+        .formulario .campo input {
+            height: 45px;
+            font-size: 15px;
+        }
+
+        .botoes-formulario {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .botao-form {
+            flex: 1;
+            min-height: 42px;
+            border-radius: 9px;
+            border: 1px solid #dfe1e8;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .salvar {
+            background: #2863e8;
+            border-color: #2863e8;
+            color: #ffffff;
+        }
+
+        .cancelar {
+            background: #ffffff;
+            color: #303342;
+        }
+
+        @media (max-width: 540px) {
+            .cabecalho {
+                height: 64px;
+            }
+
+            .botao-menu {
+                left: 17px;
+                font-size: 25px;
+            }
+
+            .titulo-cabecalho {
+                font-size: 17px;
+            }
+
+            .pagina {
+                width: calc(100% - 28px);
+                min-height: calc(100vh - 100px);
+                margin: 25px auto 25px;
+                padding: 38px 18px 40px;
+                border-radius: 25px;
+            }
+
+            .titulo-principal {
+                font-size: 29px;
+            }
+
+            .subtitulo {
+                font-size: 15px;
+                margin-bottom: 24px;
+            }
+
+            .resumo {
+                gap: 8px;
+            }
+
+            .resumo-cartao {
+                min-height: 80px;
+                padding: 13px 11px;
+            }
+
+            .resumo-cartao span {
+                font-size: 13px;
+            }
+
+            .resumo-cartao strong {
+                font-size: 25px;
+            }
+
+            .campo label {
+                font-size: 14px;
+            }
+
+            .campo input {
+                height: 48px;
+                font-size: 15px;
+            }
+
+            .treino {
+                padding: 14px 13px;
+                gap: 8px;
+            }
+
+            .informacoes-treino h2 {
+                font-size: 16px;
+            }
+
+            .informacoes-treino p {
+                font-size: 14px;
+            }
+
+            .acoes {
+                gap: 11px;
+            }
+
+            .link-acao {
+                font-size: 14px;
+            }
+
+            .botao-novo {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .pagina {
+                padding-left: 13px;
+                padding-right: 13px;
+            }
+
+            .treino {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .acoes {
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <button type="button" class="botao-menu" id="botaoMenu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+        <nav class="menu-navegacao" id="menuNavegacao">
+            <a href="#inicio">Início</a>
+            <a href="#treinos">Meus treinos</a>
+            <a href="#resumo">Resumo</a>
+        </nav>
+
+        <p class="titulo-cabecalho">Diário de Treinos - Kit 2C</p>
+    </header>
+
+    <main class="pagina" id="inicio">
+        <h1 class="titulo-principal">Diário de Treinos</h1>
+        <p class="subtitulo">Registre seus treinos e acompanhe o resumo</p>
+
+        <section class="resumo" id="resumo" aria-label="Resumo dos treinos">
+            <div class="resumo-cartao">
+                <span>Total</span>
+                <strong id="totalTreinos">3</strong>
+            </div>
+
+            <div class="resumo-cartao">
+                <span>Minutos</span>
+                <strong id="totalMinutos">125</strong>
+            </div>
+
+            <div class="resumo-cartao">
+                <span>Média</span>
+                <strong id="mediaMinutos">42</strong>
+            </div>
+        </section>
+
+        <section aria-label="Pesquisa de treinos">
+            <div class="campo">
+                <label for="buscaNome">Buscar por nome</label>
+                <input type="text" id="buscaNome" placeholder="Digite parte do nome">
+            </div>
+
+            <div class="campo">
+                <label for="duracaoMinima">Duração mínima (min)</label>
+                <input type="number" id="duracaoMinima" min="0" placeholder="Ex.: 30">
+            </div>
+        </section>
+
+        <section class="lista-treinos" id="treinos" aria-label="Lista de treinos">
+            <div class="treino">
+                <div class="informacoes-treino">
+                    <h2>Treino de pernas</h2>
+                    <p>60 min</p>
+                </div>
+                <div class="acoes">
+                    <button type="button" class="link-acao editar">Editar</button>
+                    <button type="button" class="link-acao excluir">Excluir</button>
+                </div>
+            </div>
+
+            <div class="treino">
+                <div class="informacoes-treino">
+                    <h2>Corrida leve</h2>
+                    <p>35 min</p>
+                </div>
+                <div class="acoes">
+                    <button type="button" class="link-acao editar">Editar</button>
+                    <button type="button" class="link-acao excluir">Excluir</button>
+                </div>
+            </div>
+
+            <div class="treino">
+                <div class="informacoes-treino">
+                    <h2>Alongamento</h2>
+                    <p>30 min</p>
+                </div>
+                <div class="acoes">
+                    <button type="button" class="link-acao editar">Editar</button>
+                    <button type="button" class="link-acao excluir">Excluir</button>
+                </div>
+            </div>
+        </section>
+
+        <p class="mensagem-vazia" id="mensagemVazia">Nenhum treino encontrado.</p>
+
+        <button type="button" class="botao-novo" id="botaoNovo">Novo treino</button>
+
+        <form class="formulario" id="formularioTreino">
+            <h2 id="tituloFormulario">Novo treino</h2>
+
+            <div class="campo">
+                <label for="nomeTreino">Nome do treino</label>
+                <input type="text" id="nomeTreino" placeholder="Ex.: Caminhada" required>
+            </div>
+
+            <div class="campo">
+                <label for="minutosTreino">Duração (minutos)</label>
+                <input type="number" id="minutosTreino" min="1" placeholder="Ex.: 40" required>
+            </div>
+
+            <div class="botoes-formulario">
+                <button type="submit" class="botao-form salvar">Salvar</button>
+                <button type="button" class="botao-form cancelar" id="botaoCancelar">Cancelar</button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+
+        let treinos = [
+            { id: 1, nome: "Treino de pernas", duracao: 60 },
+            { id: 2, nome: "Corrida leve", duracao: 35 },
+            { id: 3, nome: "Alongamento", duracao: 30 }
+        ];
+
+        let proximoId = 4;
+        let idEmEdicao = null;
+
+        const listaTreinos = document.getElementById("treinos");
+        const buscaNome = document.getElementById("buscaNome");
+        const duracaoMinima = document.getElementById("duracaoMinima");
+        const formulario = document.getElementById("formularioTreino");
+        const nomeTreino = document.getElementById("nomeTreino");
+        const minutosTreino = document.getElementById("minutosTreino");
+        const tituloFormulario = document.getElementById("tituloFormulario");
+
+        function atualizarResumo() {
+            const total = treinos.length;
+            const minutos = treinos.reduce((soma, treino) => soma + treino.duracao, 0);
+            const media = total > 0 ? Math.round(minutos / total) : 0;
+
+            document.getElementById("totalTreinos").textContent = total;
+            document.getElementById("totalMinutos").textContent = minutos;
+            document.getElementById("mediaMinutos").textContent = media;
+        }
+
+        function mostrarTreinos() {
+            const textoBusca = buscaNome.value.trim().toLowerCase();
+            const minimo = duracaoMinima.value === "" ? 0 : Number(duracaoMinima.value);
+
+            const treinosFiltrados = treinos.filter(treino => {
+                const nomeCorresponde = treino.nome.toLowerCase().includes(textoBusca);
+                const duracaoCorresponde = treino.duracao >= minimo;
+                return nomeCorresponde && duracaoCorresponde;
+            });
+
+            listaTreinos.innerHTML = "";
+
+            treinosFiltrados.forEach(treino => {
+                const cartao = document.createElement("article");
+                cartao.className = "treino";
+
+                const informacoes = document.createElement("div");
+                informacoes.className = "informacoes-treino";
+
+                const nome = document.createElement("h2");
+                nome.textContent = treino.nome;
+
+                const duracao = document.createElement("p");
+                duracao.textContent = `${treino.duracao} min`;
+
+                informacoes.appendChild(nome);
+                informacoes.appendChild(duracao);
+
+                const acoes = document.createElement("div");
+                acoes.className = "acoes";
+
+                const botaoEditar = document.createElement("button");
+                botaoEditar.type = "button";
+                botaoEditar.className = "link-acao editar";
+                botaoEditar.textContent = "Editar";
+                botaoEditar.addEventListener("click", () => editarTreino(treino.id));
+
+                const botaoExcluir = document.createElement("button");
+                botaoExcluir.type = "button";
+                botaoExcluir.className = "link-acao excluir";
+                botaoExcluir.textContent = "Excluir";
+                botaoExcluir.addEventListener("click", () => excluirTreino(treino.id));
+
+                acoes.appendChild(botaoEditar);
+                acoes.appendChild(botaoExcluir);
+
+                cartao.appendChild(informacoes);
+                cartao.appendChild(acoes);
+                listaTreinos.appendChild(cartao);
+            });
+
+            document.getElementById("mensagemVazia").style.display =
+                treinosFiltrados.length === 0 ? "block" : "none";
+
+            atualizarResumo();
+        }
+
+        function abrirFormulario(treino = null) {
+            formulario.classList.add("visivel");
+
+            if (treino) {
+                idEmEdicao = treino.id;
+                tituloFormulario.textContent = "Editar treino";
+                nomeTreino.value = treino.nome;
+                minutosTreino.value = treino.duracao;
+            } else {
+                idEmEdicao = null;
+                tituloFormulario.textContent = "Novo treino";
+                formulario.reset();
+            }
+
+            nomeTreino.focus();
+            formulario.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+
+        formulario.addEventListener("submit", function (evento) {
+            evento.preventDefault();
+
+            const nome = nomeTreino.value.trim();
+            const duracao = Number(minutosTreino.value);
+
+            if (nome === "" || !Number.isFinite(duracao) || duracao < 1) {
+                alert("Preencha o nome e informe uma duração válida.");
+                return;
+            }
+
+            if (idEmEdicao !== null) {
+                const treino = treinos.find(item => item.id === idEmEdicao);
+                if (treino) {
+                    treino.nome = nome;
+                    treino.duracao = duracao;
+                }
+            } else {
+                treinos.push({
+                    id: proximoId++,
+                    nome: nome,
+                    duracao: duracao
+                });
+            }
+
+            formulario.classList.remove("visivel");
+            formulario.reset();
+            idEmEdicao = null;
+            mostrarTreinos();
+        });
+
+        function editarTreino(id) {
+            const treino = treinos.find(item => item.id === id);
+            if (treino) abrirFormulario(treino);
+        }
+
+        function excluirTreino(id) {
+            const treino = treinos.find(item => item.id === id);
+            if (!treino) return;
+
+            const confirmar = window.confirm(`Tem certeza que deseja excluir "${treino.nome}"?`);
+            if (confirmar) {
+                treinos = treinos.filter(item => item.id !== id);
+                mostrarTreinos();
+            }
+        }
+
+        buscaNome.addEventListener("input", mostrarTreinos);
+        duracaoMinima.addEventListener("input", mostrarTreinos);
+
+        document.getElementById("botaoNovo").addEventListener("click", () => abrirFormulario());
+
+        document.getElementById("botaoCancelar").addEventListener("click", () => {
+            formulario.classList.remove("visivel");
+            formulario.reset();
+            idEmEdicao = null;
+        });
+
+        const botaoMenu = document.getElementById("botaoMenu");
+        const menuNavegacao = document.getElementById("menuNavegacao");
+
+        botaoMenu.addEventListener("click", () => {
+            const aberto = menuNavegacao.classList.toggle("aberto");
+            botaoMenu.setAttribute("aria-expanded", aberto);
+        });
+
+        document.addEventListener("click", (evento) => {
+            if (!menuNavegacao.contains(evento.target) && !botaoMenu.contains(evento.target)) {
+                menuNavegacao.classList.remove("aberto");
+                botaoMenu.setAttribute("aria-expanded", "false");
+            }
+        });
+
+        mostrarTreinos();
+    </script>
+</body>
+
+</html>
