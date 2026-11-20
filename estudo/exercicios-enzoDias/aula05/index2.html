@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diário de Treinos</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
     <style>
         * {
@@ -18,16 +20,7 @@
             background-color: #e7e7e7;
             color: #202333;
         }
-
-        .cabecalho,
-        .lista-treinos,
-        .mensagem-vazia,
-        .botao-novo,
-        .formulario {
-            display: none !important;
-        }
-
-        .cabecalho {
+.cabecalho {
             width: 100%;
             height: 72px;
             background-color: #292929;
@@ -444,22 +437,32 @@
         <h1 class="titulo-principal">Diário de Treinos</h1>
         <p class="subtitulo">Registre seus treinos e acompanhe o resumo</p>
 
-        <section class="resumo" id="resumo" aria-label="Resumo dos treinos">
-            <div class="resumo-cartao">
-                <span>Total</span>
-                <strong id="totalTreinos">3</strong>
-            </div>
-
-            <div class="resumo-cartao">
-                <span>Minutos</span>
-                <strong id="totalMinutos">125</strong>
-            </div>
-
-            <div class="resumo-cartao">
-                <span>Média</span>
-                <strong id="mediaMinutos">42</strong>
-            </div>
+        <section aria-label="Resumo dos treinos">
+            <div class="resumo" id="resumoReact"></div>
         </section>
+
+        <script>
+            // MEU COMPONENTE
+            function CartaoResumo(props) {
+                return React.createElement(
+                    "div",
+                    { className: "resumo-cartao" },
+                    React.createElement("span", null, props.titulo),
+                    React.createElement("strong", { id: props.id }, props.valor)
+                );
+            }
+
+            ReactDOM.render(
+                React.createElement(
+                    React.Fragment,
+                    null,
+                    React.createElement(CartaoResumo, { titulo: "Total", valor: "3", id: "totalTreinos" }),
+                    React.createElement(CartaoResumo, { titulo: "Minutos", valor: "125", id: "totalMinutos" }),
+                    React.createElement(CartaoResumo, { titulo: "Média", valor: "42", id: "mediaMinutos" })
+                ),
+                document.getElementById("resumoReact")
+            );
+        </script>
 
         <section aria-label="Pesquisa de treinos">
             <div class="campo">
@@ -708,9 +711,15 @@
                 botaoMenu.setAttribute("aria-expanded", "false");
             }
         });
-
+        
         mostrarTreinos();
     </script>
+
+    <!-- Registro de 3 linhas:
+    Escolhi o cartao de resumo para transformar em componente React.
+    Usei props para passar o titulo, o valor e o identificador de cada cartão.
+    Assim, o mesmo conponemte pode ser reutilizado para mostrar Total, Minutos e Média.
+    -->
 </body>
 
 </html>
